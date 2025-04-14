@@ -1,6 +1,7 @@
 ### Introduction
 
-There is the pre-release version of our work. All of this resource will be made public available soon. 
+Source code for [Distilling Textual Priors from LLM to Efficient Image Fusion](https://arxiv.org/abs/2504.07029)
+![pipeline](images/pipeline.png)
 
 ### Requirements
 
@@ -115,3 +116,24 @@ We provide a pre-trained distilled model for the IVF task in the `Experiments/EX
 <!-- ### Potential problems -->
 
 <!-- The code are a checkout of a git repository in windows, the line breaks are CRLF.  -->
+
+### Appendix
+
+Compare with other methods:
+IVF datasets:
+![ivf](images/ivf.png)
+Havard Medical Image Fusion Datasets:
+![med](images/med.png)
+
+If you find our work useful, please cite it as:
+```
+@misc{zhang2025distillingtextualpriorsllm,
+      title={Distilling Textual Priors from LLM to Efficient Image Fusion}, 
+      author={Ran Zhang and Xuanhua He and Ke Cao and Liu Liu and Li Zhang and Man Zhou and Jie Zhang},
+      year={2025},
+      eprint={2504.07029},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2504.07029}, 
+}
+```
