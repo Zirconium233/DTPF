@@ -1,0 +1,60 @@
+**Task Description**
+This project focuses on medical image fusion, particularly for multimodal medical images like CT-MRI, PET-MRI, SPECT-MRI, and other imaging modalities. The text annotations will guide the fusion process by describing the key characteristics and quality aspects of each modality that need to be preserved or enhanced.
+
+**Annotation Requirements**
+Each dataset sample requires:
+1. **Image Quality Description**: A precise description of the image characteristics and quality factors that are crucial for medical diagnosis.
+
+**Annotation Format**
+The annotations follow this format for consistent parsing:
+
+**Example Output**
+
+```
+Event Type: Contrast Enhancement
+Description: The MRI image shows strong soft tissue contrast that needs to be preserved, while the CT image provides clear bone structure details.
+
+Event Type: Edge Preservation
+Description: Critical anatomical boundaries are visible in both modalities, requiring precise edge preservation during fusion.
+
+Event Type: Noise Suppression
+Description: The CT image contains quantum noise that should be reduced while maintaining structural integrity.
+
+Event Type: Detail Enhancement
+Description: Fine anatomical structures in the brain tissue need to be enhanced while preserving the overall contrast.
+
+Event Type: Structure Consistency
+Description: Both modalities show complementary structural information that must be accurately aligned and preserved.
+
+Event Type: Artifact Reduction
+Description: The MRI image shows minor motion artifacts that should be minimized in the fusion process.
+```
+
+---
+
+**Loss Weight Rationale**
+- Contrast Enhancement: max_ratio=10, consist_ratio=6, text_ratio=8
+  (Preserving contrast is crucial for diagnostic accuracy)
+  
+- Edge Preservation: max_ratio=12, consist_ratio=8, text_ratio=6
+  (Sharp edges are essential for identifying anatomical boundaries)
+  
+- Noise Suppression: max_ratio=8, consist_ratio=10, text_ratio=6
+  (Balance between noise reduction and detail preservation)
+  
+- Detail Enhancement: max_ratio=10, consist_ratio=8, text_ratio=8
+  (Fine anatomical details are critical for diagnosis)
+  
+- Structure Consistency: max_ratio=12, consist_ratio=10, text_ratio=6
+  (Maintaining structural integrity across modalities)
+  
+- Artifact Reduction: max_ratio=8, consist_ratio=12, text_ratio=8
+  (Minimizing artifacts while preserving important features)
+```
+
+**Instructions for the LLM**
+Based on the medical image pairs, your task is to:
+1. Analyze the quality and characteristics of each medical image modality
+2. Generate descriptions focusing on clinically relevant features
+3. Identify specific image quality aspects that need attention during fusion
+4. Follow the exact two-line format as shown in the examples

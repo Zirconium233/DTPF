@@ -1,0 +1,14 @@
+.idea
+.vscode
+wandb/
+TensorBoardLogs/
+__pycache__/
+save_images/
+data/
+# Experiments/
+temp_dir/
+log_dir/
+*.ipynb
+*.log
+# *.txt
+*.out

@@ -1,0 +1,41 @@
+**Task Description**  
+We are working on a project where text semantics guide the fusion of visible and infrared images. To train the model, we need to generate textual annotations for each dataset. These annotations should focus on describing the degradation types and their effects on image quality.  
+
+**Annotation Requirements**  
+Each dataset sample requires:  
+1. **Degradation Description**: A clear and concise explanation of the degradation type and its impact on image quality.  
+
+**Annotation Format**  
+The annotations should follow this simplified format for easy parsing:  
+
+**Example Output**  
+(Each sample's description consists of two lines: the first line specifies the event type, and the second line provides the corresponding description.)  
+
+```
+Event Type: Low Light  
+Description: This infrared image suffers from low light degradation, making some details less visible.  
+
+Event Type: High Noise  
+Description: The visible image contains significant noise, which could affect the fusion process.  
+
+Event Type: Overexposure  
+Description: The visible image is overexposed, causing the loss of details in bright regions.  
+
+Event Type: Motion Blur  
+Description: Motion blur in the visible image makes objects appear smeared and unclear.  
+
+Event Type: Low Contrast  
+Description: The infrared image has low contrast, making it difficult to distinguish between foreground and background.  
+
+Event Type: Sensor Artifact  
+Description: The infrared image contains sensor artifacts, such as vertical lines, that disrupt image quality.  
+```
+
+---
+
+**Instructions for the LLM**  
+Based on the description above, your task is to:  
+1. Analyze each pair of images (visible and infrared) and generate a "Degradation Description" based on their quality.  
+2. Ensure the descriptions reflect the specific degradation type(s) present in the images.  
+3. **If additional degradation types are observed that are not covered in the examples, generate new events and corresponding descriptions**. Use concise, clear wording to describe them.  
+4. Strictly follow the two-line format provided above.  
