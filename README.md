@@ -1,6 +1,6 @@
 ### Introduction
 
-Source code for [Distilling Textual Priors from LLM to Efficient Image Fusion](https://arxiv.org/abs/2504.07029)
+Source code for [Distilling Textual Priors from LLM to Efficient Image Fusion](https://ieeexplore.ieee.org/document/11219206)
 ![pipeline](images/pipeline.png)
 
 ### Requirements
