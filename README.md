@@ -127,13 +127,15 @@ Havard Medical Image Fusion Datasets:
 
 If you find our work useful, please cite it as:
 ```
-@misc{zhang2025distillingtextualpriorsllm,
-      title={Distilling Textual Priors from LLM to Efficient Image Fusion}, 
-      author={Ran Zhang and Xuanhua He and Ke Cao and Liu Liu and Li Zhang and Man Zhou and Jie Zhang},
-      year={2025},
-      eprint={2504.07029},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2504.07029}, 
+@ARTICLE{11219206,
+  author={Zhang, Ran and He, Xuanhua and Cao, Ke and Liu, Liu and Zhang, Li and Zhou, Man and Zhang, Jie and Guo, Dan and Wang, Meng},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
+  title={Distilling Textual Priors from LLM to Efficient Image Fusion}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-1},
+  keywords={Computational modeling;Image fusion;Semantics;Visualization;Training;Knowledge engineering;Computational efficiency;Large language models;Electronic mail;Computer architecture;Image Fusion;Knowledge Distillation;Large Language Models;Multi-modality Learning},
+  doi={10.1109/TCSVT.2025.3626414}
 }
 ```
